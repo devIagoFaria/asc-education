@@ -1,0 +1,35 @@
+<app-menu></app-menu>
+
+<section class="div-background">
+
+    <div class="card">
+        <div>
+            <a routerLink="/portal/formulario/add/{{table}}"><button>  Adicionar Professor</button></a>
+        </div>
+
+        <div class="table-scroll">
+            <table>
+                <tr>
+                    <ng-template ngFor let-title [ngForOf]="tableTitles">
+                        <th>{{title}}</th>
+                    </ng-template>
+                </tr>
+
+                <ng-template ngFor let-item [ngForOf]="itens">
+                    <tr>
+                        <a routerLink="/portal/professor/{{item.id}}/{{table}}"><td>{{item.nome}}</td> </a>
+                        <td> 
+                            <Button (click)="deleteElement(item.id)" >D</Button> 
+                            <Button  (click)="editElement(item.id)">U</Button> </td>
+                    </tr>
+                </ng-template>
+
+
+
+            </table>
+        </div>
+
+    </div>
+
+
+</section>

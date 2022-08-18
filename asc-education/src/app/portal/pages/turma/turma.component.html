@@ -1,0 +1,60 @@
+<app-menu></app-menu>
+
+<section class="div-background">
+
+    <div class="card">
+
+        <div class="card-between">
+            <p>Nome: {{focusedElement.materia}}</p>
+            <p>Alunos: {{otherItens.length}}</p>
+        </div>
+
+        <div class="card-between">
+            <a routerLink="/portal/{{back}}"><button> Voltar</button></a>
+        </div>
+
+
+        <div >
+            <table>
+                <tr>
+                    <ng-template ngFor let-title [ngForOf]="tableTitles">
+                        <th>{{title}}</th>
+                    </ng-template>
+                </tr>
+
+
+                <tr>
+                    <td>{{item.nome}}</td>
+                </tr>
+
+
+
+
+            </table>
+        </div>
+
+        <div  class="table-scroll" style="max-height: 200px ;" >
+            <table>
+                <tr>
+                    <ng-template ngFor let-title [ngForOf]="otherTableTitles">
+                        <th>{{title}}</th>
+                    </ng-template>
+                </tr>
+
+                <ng-template ngFor let-otherItem [ngForOf]="otherItens">
+                    <tr>
+                        <td>{{otherItem.nome}}</td>
+                        <td>{{otherItem.status}}</td>
+                    </tr>
+                </ng-template>
+
+
+
+            </table>
+        </div>
+
+
+    </div>
+
+
+</section>

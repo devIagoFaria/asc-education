@@ -1,0 +1,13 @@
+<section>
+
+    <ul>
+        <ng-template ngFor let-routes [ngForOf]="menu">
+
+        <a routerLink="/portal/{{routes.link}}" ><li>{{routes.name}}</li></a>
+
+        </ng-template>
+
+
+    </ul>
+
+</section>

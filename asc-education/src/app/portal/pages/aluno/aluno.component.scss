@@ -1,0 +1,20 @@
+@import '../../../../assets/scss/variveis.scss';
+@import '../../../../assets/scss/table.scss';
+
+
+.table-student{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 3px solid rgba(0, 0, 0, 0.37) ;
+
+    
+}
+
+.table-student td,th{
+    width: 25%;
+
+    
+}
+
+
+

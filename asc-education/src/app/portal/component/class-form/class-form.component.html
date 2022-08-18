@@ -1,0 +1,43 @@
+<form *ngIf="!editBoolean" [formGroup]="classForm" (ngSubmit)="submitForm()" >
+
+
+    <div>
+        <input type="text" formControlName="materia" placeholder="Inserir nome do professor...">    
+    </div>
+
+    <div>
+        <select formControlName="teacher_id">
+            <ng-template ngFor let-teacher [ngForOf]="teachers">
+                <option value="{{teacher.id}}">{{teacher.nome}}</option>
+            </ng-template>
+            
+        </select>  
+    </div>
+
+    <div>
+        <input type="submit">
+    </div>
+    
+</form>
+
+<form *ngIf="editBoolean" [formGroup]="classEditForm" (ngSubmit)="submitEditForm()" >
+
+
+    <div>
+        <input type="text" formControlName="materia" placeholder="Inserir nome do professor...">    
+    </div>
+
+    <div>
+        <select formControlName="teacher_id">
+            <ng-template ngFor let-teacher [ngForOf]="teachers">
+                <option value="{{teacher.id}}">{{teacher.nome}}</option>
+            </ng-template>
+            
+        </select>  
+    </div>
+
+    <div>
+        <input type="submit">
+    </div>
+    
+</form>

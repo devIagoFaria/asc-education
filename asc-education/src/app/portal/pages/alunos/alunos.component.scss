@@ -1,0 +1,16 @@
+@import '../../../../assets/scss/variveis.scss';
+
+table{
+
+    width: 100%;
+}
+
+tr{
+    background-color: $primary-background-color ;
+    width: 100%;
+    text-align: left;
+}
+
+th, td{
+    padding: 10px;
+}

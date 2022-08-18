@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+@import './assets/scss/variveis.scss';
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+.div-background{
+
+    background-color: $primary-background-color;
+
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    width: 100%;
+
+}
+
+.card{
+    background-color: white;
+    padding: 20px;
+    width: 70%;
+}
+
+.card-between{
+    display: flex;
+    justify-content: space-between;
+}
+
+.table-scroll{
+    max-height: 400px; 
+    overflow-y: scroll;
+    margin-bottom: 10px;
+}
+

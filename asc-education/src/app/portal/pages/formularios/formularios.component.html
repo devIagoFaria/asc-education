@@ -1,0 +1,21 @@
+<app-menu></app-menu>
+
+
+<section class="div-background">
+
+    <div class="card">
+
+        <app-student-form *ngIf="studentForm" [element_id]="idIs"></app-student-form>
+
+        <app-test-form  *ngIf="testForm" [element_id]="idIs" ></app-test-form>
+
+        <app-teacher-form *ngIf="teacherForm"  [element_id]="idIs" ></app-teacher-form>
+
+        <app-class-form *ngIf="classForm" [element_id]="idIs" ></app-class-form>
+
+        <app-enrollment-form *ngIf="enrollmentForm" [element_id]="idIs"></app-enrollment-form>
+
+    </div>
+
+
+</section>

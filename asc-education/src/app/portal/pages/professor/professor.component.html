@@ -1,0 +1,44 @@
+<app-menu></app-menu>
+
+<section class="div-background">
+
+    <div class="card">
+
+        <div class="card-between">
+            <p>Nome: {{focusedElement.nome}}</p>
+            <p>Matricula: {{focusedElement.matricula}}</p>
+        </div>
+
+        <div class="card-between">
+            <p>Situação Academica: {{focusedElement.status}}</p>
+   
+        </div>
+
+        <div class="card-between">
+            <a routerLink="/portal/{{back}}"><button> Voltar</button></a>
+        </div>
+
+        <div>
+            <table>
+                <tr>
+                    <ng-template ngFor let-title [ngForOf]="tableTitles">
+                        <th>{{title}}</th>
+                    </ng-template>
+                </tr>
+
+                <ng-template ngFor let-item [ngForOf]="itens">
+                    <tr>
+                        <td>{{item.materia}}</td> 
+                    </tr>
+                </ng-template>
+
+
+
+            </table>
+        </div>
+
+
+    </div>
+
+
+</section>

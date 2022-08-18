@@ -1,0 +1,24 @@
+
+section{
+    background-color: rgb(145, 145, 145);
+
+}
+
+ul{
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 50px;
+}
+
+li{
+    padding: 10px;
+    list-style: none;
+    cursor: pointer;
+}
+
+a{
+ 
+    cursor: pointer;
+}

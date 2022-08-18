@@ -1,0 +1,28 @@
+<form *ngIf="!editBoolean" [formGroup]="enrollmentForm" (ngSubmit)="submitForm()" >
+
+
+    <div>
+        <select formControlName="materia">
+            <ng-template ngFor let-class [ngForOf]="classes">
+                <option value="{{class.id}}">{{class.materia}}</option>
+            </ng-template>
+            
+        </select>  
+    </div>
+
+    <div>
+        <select formControlName="student">
+            <ng-template ngFor let-student [ngForOf]="students">
+                <option value="{{student.id}}">{{student.nome}}</option>
+            </ng-template>
+            
+        </select>  
+    </div>
+
+    <div>
+        <input type="submit">
+    </div>
+    
+</form>
+
+

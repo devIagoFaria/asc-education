@@ -1,0 +1,107 @@
+<app-menu></app-menu>
+
+<section class="div-background">
+
+    <div class="card">
+
+        <div class="card-between">
+            <p>Nome: {{focusedElement.nome}}</p>
+            <p>Matricula: {{focusedElement.matricula}}</p>
+        </div>
+
+        <div class="card-between">
+            <p>Situação Academica: {{focusedElement.status}}</p>
+
+        </div>
+
+        <div class="card-between">
+            <a routerLink="/portal/{{back}}"><button> Voltar</button></a>
+            <a *ngIf="addTest" routerLink="/portal/formulario/{{focusedElement.id}}/{{table}}"><button> Adicionar
+                    Prova</button></a>
+            <a *ngIf="finalTest" routerLink="/portal/formulario/{{focusedElement.id}}/{{table}}"><button> Adicionar
+                    Prova Final</button></a>
+        </div>
+
+        <div >
+            <table>
+                <tr>
+                    <ng-template ngFor let-title [ngForOf]="tableTitles">
+                        <th>{{title}}</th>
+                    </ng-template>
+                </tr>
+
+    
+                
+
+                <ng-template ngFor let-item [ngForOf]="itens">
+                    <div class="table-student">
+
+
+                        <h3>{{item.turma}}</h3>
+                        <table>
+                            
+                            <tr>
+                                <th>A1</th>
+                                <th>A2</th>
+                                <th>A3</th>
+                                <th>Prova Final</th>
+                            </tr>
+                            <tr>
+                                <td *ngFor="let prova of item.provas">{{(prova.nota)}}</td>
+                                
+                            </tr>
+
+
+                        </table>
+                        <div class="card-between">
+                            <h5>Média: {{item.media}}</h5>
+                            <h5>Status: {{item.status}}</h5>     
+                        </div>
+                        
+                    </div>
+
+                </ng-template>
+
+
+
+            </table>
+        </div>
+
+        <div >
+            <table>
+                <tr>
+                    <ng-template ngFor let-title [ngForOf]="otherTitles">
+                        <th>{{title}}</th>
+                    </ng-template>
+                </tr>
+
+                <div *ngIf="!addTest">
+                    <div class="table-student" style="text-align: center ;">
+                       <div>Não está vinculado a nenhuma turma no momento</div>
+                    </div>
+                </div>
+                
+
+                <ng-template ngFor let-item [ngForOf]="otherItens">
+                    <table>
+                        <tr>
+                            <td>{{item.materia}}</td>
+                        </tr>
+        
+                    </table>
+
+                </ng-template>
+
+
+
+            </table>
+        </div>
+
+
+
+
+
+    </div>
+
+
+</section>

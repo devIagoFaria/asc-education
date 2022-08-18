@@ -1,0 +1,32 @@
+<form [formGroup]="testForm" (ngSubmit)="submitForm()" >
+
+    <div>
+        <select formControlName="class_id" (change)="schoolTestIs()" >
+            <ng-template ngFor let-test [ngForOf]="schoolClass">
+                <option value="{{test.id}}">{{test.materia}}</option>
+            </ng-template>
+
+        </select>
+    </div>
+
+
+    <div>
+        <select formControlName="materia" id="">
+            <ng-template ngFor let-test [ngForOf]="schoolTest">
+                <option  value="{{test.prova}}">{{test.nome}}</option>
+            </ng-template>
+
+        </select>
+    </div>
+
+
+
+    <div>
+        <input type="number" formControlName="nota" placeholder="Inserir nota do aluno...">    
+    </div>
+
+    <div>
+        <input [disabled]="testForm.invalid" type="submit">
+    </div>
+    
+</form>

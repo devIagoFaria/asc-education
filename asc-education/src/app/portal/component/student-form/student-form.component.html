@@ -1,0 +1,31 @@
+<form *ngIf="!studentEditBoolean" [formGroup]="studentForm" (ngSubmit)="submitForm()" >
+
+    <div>
+        <input type="text" formControlName="nome" placeholder="Inserir nome do aluno...">    
+    </div>
+
+    <div>
+        <input type="password" formControlName="senha" placeholder="Inserir senha do aluno...">    
+    </div>
+
+    <div>
+        <input type="submit">
+    </div>
+    
+</form>
+
+<form *ngIf="studentEditBoolean" [formGroup]="studentFormEdit" (ngSubmit)="submitFormEdit()" >
+
+    <div>
+        <input type="text" formControlName="nome" placeholder="Inserir nome do aluno...">    
+    </div>
+
+    <div>
+        <input type="password" formControlName="senha" placeholder="Inserir senha do aluno...">    
+    </div>
+
+    <div>
+        <input type="submit">
+    </div>
+    
+</form>
